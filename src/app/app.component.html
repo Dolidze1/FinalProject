@@ -1,2 +1,6 @@
 <app-header></app-header>
-<app-users> </app-users>
+<div class="container" class="col-4">
+<input type="text" class="form-control" [(ngModel)]="searchInput">
+<button class="btn btn-error" (click)="searchData()" > dd </button>
+</div>
+<app-users [inputSearch]="searchWord" > </app-users>
