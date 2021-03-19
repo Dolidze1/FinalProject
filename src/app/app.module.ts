@@ -8,13 +8,28 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { VideocomponentComponent } from './videocomponent/videocomponent.component';
+import { UsersearchComponent } from './usersearch/usersearch.component';
+import { CentercontnetnComponent } from './centercontnetn/centercontnetn.component';
+import { AnchortagsComponent } from './anchortags/anchortags.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     
-    HeaderComponent
+    HeaderComponent,
+    
+    VideocomponentComponent,
+    
+    UsersearchComponent,
+    
+    CentercontnetnComponent,
+    
+    AnchortagsComponent,
+    
+    GridComponent
   ],
   imports: [
     BrowserModule,

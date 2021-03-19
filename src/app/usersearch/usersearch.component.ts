@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-usersearch',
+  templateUrl: './usersearch.component.html',
+  styleUrls: ['./usersearch.component.css']
 })
-export class AppComponent {
+export class UsersearchComponent  {
+
   title = 'FinalProject';
  
   searchWord:string = '';

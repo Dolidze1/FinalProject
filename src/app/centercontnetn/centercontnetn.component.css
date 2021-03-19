@@ -1,0 +1,16 @@
+.contnet{
+    position: relative;
+    height: 250px;
+    border: 1px solid green ;
+}
+
+.center{
+              
+    position: absolute;
+    margin: 0%;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}

@@ -10,27 +10,25 @@ import {FormControl , FormGroup, MinLengthValidator, ReactiveFormsModule} from "
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+   @Input() iputId:number[]=[];
    @Input()
-   inputSearch : string = '';
-  usersData : any[] = [];
-  userForms= new FormGroup({
-            
-    nameControl:  new FormControl(''),
-    priceControl:  new FormControl(''),
-    quantityControl: new FormControl(''),
-    varietyControl: new FormControl(''),
-    idControl : new FormControl(''),
-   
-  });
+   @Input()
 
-  showError:boolean = false;
+   inputSearch : string = '';
+   fullUsersData:any[]=[];
+   usersData : any[] = [];
+
+   
+  
+
+   showError:boolean = false;
   constructor(public userService : UsersServiceService) {
 
    }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(
-      data => {this.usersData = data; console.log(this.usersData)}
+      data => {this.usersData = data; this.fullUsersData=data;  console.log()}
     );
 
   }
@@ -44,14 +42,28 @@ export class UsersComponent implements OnInit {
           var search = changes[property].currentValue;
           console.log(search);
 
-          if(search != '' && search != undefined){
+          if(search != '' && search != undefined ){
 
-            var filtersData = this.usersData.filter((x:any)=> x.id == search ||
+             console.log(this.fullUsersData)
+            var filtersData = this.fullUsersData.filter((x:any)=> x.id == search ||
             
-            x.userId == search ||
-            x.title.indexOf(search) > -1 ||
-            x.body.indexOf(search) > -1 );
+            x.Id == search ||
+            x.name.indexOf(search) > -1 ||
+            x.body.indexOf(search) > -1 )  ;
 
+            this.usersData=filtersData;
+
+
+            
+            
+
+          } if(search == '' || search == undefined ){
+
+            this.showError=true;
+          }
+
+          else{
+            this.showError=false;
 
           }
          
@@ -60,7 +72,7 @@ export class UsersComponent implements OnInit {
 
           
          
-        }
+        } 
     }
   
 
