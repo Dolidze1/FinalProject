@@ -13,29 +13,30 @@ import { UsersearchComponent } from './usersearch/usersearch.component';
 import { CentercontnetnComponent } from './centercontnetn/centercontnetn.component';
 import { AnchortagsComponent } from './anchortags/anchortags.component';
 import { GridComponent } from './grid/grid.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { MyPipePipe } from './my-pipe.pipe';
+import { MyPipe2Pipe } from './my-pipe2.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    
-    HeaderComponent,
-    
-    VideocomponentComponent,
-    
+    HeaderComponent, 
+    VideocomponentComponent, 
     UsersearchComponent,
-    
-    CentercontnetnComponent,
-    
+    CentercontnetnComponent, 
     AnchortagsComponent,
-    
-    GridComponent
+    GridComponent,   
+    PipeComponent, 
+    MyPipePipe,
+    MyPipe2Pipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
     
   ],
   providers: [],

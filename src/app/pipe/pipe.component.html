@@ -1,0 +1,34 @@
+<p>
+  current is :   {{currentDate | date}}
+</p>
+
+<p>
+    current is :   {{oldDate | date : 'MM/dd/yyyy'}}
+  </p>
+
+  <p>
+    current is :   {{oldDate | date : 'shortDate'}}
+  </p>
+
+
+  <p>
+    current is :   {{oldDate | date : 'fullDate' | uppercase}}
+  </p>
+
+
+  <p>
+    money is :   {{amount | currency : 'GEL '}}
+  </p>
+
+
+  <p>
+    word  is :   {{word | uppercase}}
+  </p>
+
+  <p>
+    num  is :   {{num}}
+  </p>
+
+  <p>Number was: {{num}} ;Number is: {{num |myPipe}}</p>
+
+  <p> {{currentDate | myPipe2}} </p>
